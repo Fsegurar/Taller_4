@@ -1,0 +1,52 @@
+INSERT INTO UserApp (email,password,role,username) VALUES('owner@gmail.com','0000','owner','pperez02');
+INSERT INTO UserApp (email,password,role,username) VALUES('owner@yahoo.com','9632*','owner','smileman');
+INSERT INTO UserApp (email,password,role,username) VALUES('owner01@yahoo.com','345tg*','owner','felipe01');
+INSERT INTO UserApp (email,password,role,username) VALUES('owneryotas@gmail.com','poikjhy6*','owner','valentona15');
+INSERT INTO UserApp (email,password,role,username) VALUES('dueño@yahoo.com','952dfgh*','owner','catidog');
+INSERT INTO UserApp (email,password,role,username) VALUES('vet@hotmail.com','dogi*','vet','vet_paquita');
+INSERT INTO UserApp (email,password,role,username) VALUES('vet01@hotmail.com','asdfgr','vet','vet_forever');
+INSERT INTO UserApp (email,password,role,username) VALUES('vet02@hotmail.com','poiujhghjk*','vet','catpassion');
+INSERT INTO UserApp (email,password,role,username) VALUES('vet<3@hotmail.com','pokjhb*','vet','dogilover02');
+INSERT INTO UserApp (email,password,role,username) VALUES('vet@gmail.com','12345','vet','PetLover01');
+INSERT INTO UserApp (email,password,role,username) VALUES('official@gmail.com','09874','official','0fficial01');
+INSERT INTO UserApp (email,password,role,username) VALUES('official01@gmail.com','sdfgh','official','0fficial05');
+INSERT INTO UserApp (email,password,role,username) VALUES('official02@gmail.com','wert','official','0fficial02');
+INSERT INTO UserApp (email,password,role,username) VALUES('official03@gmail.com','xcv','official','0fficial03');
+INSERT INTO UserApp (email,password,role,username) VALUES('official04@gmail.com','drf','official','0fficial04');
+
+
+INSERT INTO owner (address,name,neighborhood,person_id,username) VALUES('cll 45 #32-4','pepe perez','Suba',1,'pperez02');
+INSERT INTO owner (address,name,neighborhood,person_id,username) VALUES('av boyaca #11-4','juan alvarez','Usme',2,'smileman');
+INSERT INTO owner (address,name,neighborhood,person_id,username) VALUES('kr 7 #145-9','Daniela garcia','usaquen',3,'valentona15');
+INSERT INTO owner (address,name,neighborhood,person_id,username) VALUES('av 9 #138-8','Laura Torres','p.Aranda',4,'catidog');
+INSERT INTO owner (address,name,neighborhood,person_id,username) VALUES('cll 173 #7-100','Felipe Rodiguez','Engativa',5,'felipe01');
+
+INSERT INTO vet (address,name,neighborhood,username) VALUES('cll 116 #7a-45','CATDOG','Usaquen','PetLover01');
+INSERT INTO vet (address,name,neighborhood,username) VALUES('kr 10 #15-9','paquita','Rosales','vet_paquita');
+INSERT INTO vet (address,name,neighborhood,username) VALUES('av 30 #45-4','puppies','Chapinero','vet_forever');
+INSERT INTO vet (address,name,neighborhood,username) VALUES('cll 100 #13','save DOg','Suba','dogilover02');
+INSERT INTO vet (address,name,neighborhood,username) VALUES('cll 145 #7-45','cati save','B.unidos','catpassion');
+
+INSERT INTO official (name,username) VALUES('rick sanchez','0fficial01');
+INSERT INTO official (name,username) VALUES('Fredy benzon','0fficial02');
+INSERT INTO official (name,username) VALUES('miguel mouse','0fficial03');
+INSERT INTO official (name,username) VALUES('Barry allen','0fficial04');
+INSERT INTO official (name,username) VALUES('Klar kent','0fficial05');
+
+INSERT INTO pet (microchip,name,owner_id,pet_id,picture,race,sex,size,species) VALUES('010205','martina',1,1,'pechochamarti.png','Shih Tzu','hembra','pequeño','perro');
+INSERT INTO pet (microchip,name,owner_id,pet_id,picture,race,sex,size,species) VALUES('036654','firulais',2,2,'poderfiru.jpg','Gran danésu','macho','grande','perro');
+INSERT INTO pet (microchip,name,owner_id,pet_id,picture,race,sex,size,species) VALUES('96854','zoe',3,3,'cati.png','persa','hembra','pequeño','gato');
+INSERT INTO pet (microchip,name,owner_id,pet_id,picture,race,sex,size,species) VALUES('851563','toto',4,4,'tonto.jpg','bengala','macho','pequeño','gato');
+INSERT INTO pet (microchip,name,owner_id,pet_id,picture,race,sex,size,species) VALUES('18120','Aslan',5,5,'imagen.png','Golden retriver','macho','mediano','perro');
+
+INSERT INTO visit(description,pet_id,type,vet_id,visit_id) VALUES('vista a paciente en recuperacion',3,'esterilizacion','CATDOG',1);
+INSERT INTO visit(description,pet_id,type,vet_id,visit_id) VALUES('control',1,'control','paquita',2);
+INSERT INTO visit(description,pet_id,type,vet_id,visit_id) VALUES('implatacion de microchip',4,'implatacion ','puppies',3);
+INSERT INTO visit(description,pet_id,type,vet_id,visit_id) VALUES('urgencia',1,'caida de un decimo piso','cati save',4);
+INSERT INTO visit(description,pet_id,type,vet_id,visit_id) VALUES('vacunacion',5,'inyecciones de control','save DOg',5);
+
+INSERT INTO petcase(created_at,description,pet_id,type) VALUES('calle','en el paso matutino salio corriendo',2,'pérdida');
+INSERT INTO petcase(created_at,description,pet_id,type) VALUES('auto','llevaba la ventana abierta del auto y de repente una moto se lo llevo',4,'robo');
+INSERT INTO petcase(created_at,description,pet_id,type) VALUES('casa','fallecio ',3,'fallecimiento');
+INSERT INTO petcase(created_at,description,pet_id,type) VALUES('veterinaria','se perdio el colar',1,'pérdida');
+INSERT INTO petcase(created_at,description,pet_id,type) VALUES('casa','lo dejamos en casa y cuando regresamos no estaba',5,'pérdida');

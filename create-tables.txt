@@ -1,0 +1,76 @@
+CREATE TABLE UserApp(
+	username varchar not null,
+	password varchar not null,
+	email varchar not null,
+	role varchar not null,
+	PRIMARY KEY (username)
+);
+
+CREATE TABLE Owner(
+	username varchar not null,
+	person_id INT not null UNIQUE,
+	name varchar not null,
+	address varchar not null,
+	neighborhood varchar not null,
+	PRIMARY KEY (username),
+	FOREIGN KEY (username) 
+	REFERENCES UserApp (username) 
+);
+
+CREATE TABLE Official(
+	username varchar not null,
+	name varchar not null,
+	PRIMARY KEY (username),
+	FOREIGN KEY (username) 
+	REFERENCES UserApp (username)
+);
+
+CREATE TABLE Vet(
+	username varchar not null,
+	name varchar not null UNIQUE,
+	address varchar not null,
+	neighborhood varchar not null,
+	PRIMARY KEY (username),
+	FOREIGN KEY (username) 
+	REFERENCES UserApp (username)
+);
+
+CREATE TABLE Pet(
+	pet_id INT not null,
+	microchip INT not null UNIQUE,
+	name varchar not null ,
+	species varchar not null,
+	race varchar not null,
+	size varchar not null,
+	sex varchar not null,
+	picture varchar not null,
+	owner_id INT not null,
+	PRIMARY KEY (pet_id),
+	FOREIGN KEY (owner_id) 
+	REFERENCES Owner (person_id)
+);
+
+CREATE TABLE Visit(
+	visit_id INT not null,
+	type varchar not null,
+	description varchar not null,
+	vet_id varchar not null,
+	pet_id INT not null,
+	PRIMARY KEY (visit_id),
+	FOREIGN KEY (vet_id) 
+	REFERENCES Vet (name),
+	FOREIGN KEY (pet_id) 
+	REFERENCES Pet (pet_id)
+);
+
+CREATE TABLE PetCase(
+	case_id SERIAL not null,
+	created_at varchar not null,
+	type varchar not null,
+	description varchar not null,
+	pet_id INT not null,
+	PRIMARY KEY (case_id),
+	FOREIGN KEY (pet_id) 
+	REFERENCES Pet (pet_id)
+);
+
